@@ -1,0 +1,32 @@
+.header {
+  max-width: 1171px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn {
+  border: none;
+  padding: 0;
+  width: 120px;
+  background-color: #468BE3;
+  border-radius: 0px 5px 5px 0px;
+  padding: 11px 23px;
+  color: #FFF;
+  height: 43px;
+}
+
+.input {
+  border: 1px solid #468BE3;
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+  height: 43px;
+  padding: 0;
+  width: 540px;
+  outline: none;
+  padding: 17px;
+}
