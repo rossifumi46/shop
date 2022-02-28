@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  padding: 0;
+  width: 120px;
+  background-color: #468BE3;
+  border-radius: 5px;
+  padding: 11px 23px;
+  color: #FFF;
+  height: 43px;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.catalog {
+  display: block;
+}
+
+@media (max-width: $tablet) {
+  .catalog {
+    display: none;
+  }
+
+  .btn {
+    height: 33px;
+    padding: 7px 21px;
+  }
+}

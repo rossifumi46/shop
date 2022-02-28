@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  @include padding-m;
+}
+
+.item {
+  font-size: 14px;
+  line-height: 140%;
+  color: $grey;
+  margin-left: 5px;
+  &:first-of-type {
+    margin-left: 0;
+    &::before {
+      content: '';
+      margin-right: 0;
+    }
+  }
+  &::before {
+    content: '/';
+    margin-right: 5px;
+  }
+}

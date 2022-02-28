@@ -1,0 +1,38 @@
+.grid_1 {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  gap: 10px;
+  @media (max-width: $tablet) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include padding-m;
+}
+
+.grid_2 {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  gap: 10px;
+  width: 100%;
+  @media (max-width: $tablet) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include padding-m;
+}
+
+.cell {
+  width: 100%;
+  height: 240px;
+  background-color: $light-grey;
+}

@@ -1,0 +1,40 @@
+.options {
+  display: flex;
+}
+
+.option_title {
+  font-size: 14px;
+  line-height: 140%;
+  color: $black;
+}
+
+.option {
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  background-color: $light-grey;
+  padding: 10px;
+  min-width: 67px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &_color {
+    background-color: $white;
+    border: 1.5px solid $light-grey;
+  }
+  &_selected {
+    border: 1.5px solid $blue;
+    color: $black;
+    background-color: $white;
+  }
+}
+
+.color {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: $grey;
+}

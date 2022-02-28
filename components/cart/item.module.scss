@@ -1,0 +1,45 @@
+.count {
+  font-size: 16px;
+  line-height: 140%;
+  color: $black;
+  margin-top: 5px;
+  @media (max-width: 480px) {
+    margin-top: 0;
+    margin-left: 5px;
+  }
+}
+
+.count_title {
+  font-size: 14px;
+  line-height: 140%;
+  color: $grey;
+
+  @media (max-width: 480px) {
+    &:after {
+      content: ':';
+    }
+  }
+}
+
+.counts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    flex-direction: row;
+    margin-left: 14px;
+    align-items: center;
+    margin-top: 9px;
+  }
+}
+
+.image {
+  border: 1px solid #C7CCD5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: fit-content;
+  &_cart {
+    border: none;
+  }
+}

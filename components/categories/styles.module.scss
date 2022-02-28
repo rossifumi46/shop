@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  margin-top: 50px;
+  
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    @include padding-m;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+
+}
+
+.slider {
+  margin-top: 50px;
+  display: none;
+  @include padding-m;
+  @media (max-width: 480px) {
+    display: block;
+    margin-top: 35px;
+  }
+  max-width: 100%;
+}

@@ -1,47 +1,51 @@
-function Footer() {
+import styles from './styles.module.scss';
+
+export function Footer() {
   return (
-    <footer>
-      <div>
-        <div>
-          <h3>Каталог</h3>
+    <footer className={styles.footer}>
+      <div className={styles.row}>
+        <div className={styles.nav}>
+        <div className={styles.column}>
+          <h3 className={styles.title}>Каталог</h3>
           <nav>
-            <ul>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
+            <ul className="mt-5">
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
             </ul>
           </nav>
         </div>
-        <div>
-          <h3>Каталог</h3>
+        <div className={styles.column}>
+        <h3 className={styles.title}>Каталог</h3>
           <nav>
-            <ul>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
+            <ul className="mt-5">
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
+              <li className={styles.listItem}>Мужчинам</li>
             </ul>
           </nav>
         </div>
-        <div>
-          <h3>Каталог</h3>
+        <div className={styles.column}>
+          <h3 className={styles.title}>Мы в соц сетях</h3>
           <nav>
-            <ul>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
-              <li>Мужчинам</li>
+            <ul className="mt-5">
+              <li className={styles.listItem}>Вконтакте</li>
+              <li className={styles.listItem}>Facebook</li>
+              <li className={styles.listItem}>Instagram</li>
             </ul>
           </nav>
         </div>
-        <div>
-          <p></p>
-          <p></p>
-          <img src="" alt="logo" />
+        </div>
+        <div className={styles.info}>
+          <p className={styles.listItem}>2021-2022 © Vartmon — интернет-магазин одежды, обуви и многого другого.</p>
+          <p className={styles.listItem}>Все права защищены.</p>
+          <div className={styles.imageWrapper}>
+            <img src="/logo.png" alt="logo" />
+          </div>
         </div>
       </div>
     </footer>

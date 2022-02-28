@@ -1,0 +1,230 @@
+.cart {
+  background-color: #F5F5F5;
+  width: 100vw;
+  padding: 52px 0 107px;
+  display: flex;
+  justify-content: center;
+  @include padding-m;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+}
+
+.blocks {
+  display: grid;
+  margin-top: 35px;
+  grid-template-columns: 0.6fr 0.4fr;
+  gap: 35px;
+}
+
+.list {
+  background: #FFFFFF;  
+  border: 1px solid #F5F5F5;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+
+.info {
+  background: #FFFFFF;
+  border: 1px solid #F5F5F5;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  // margin-left: 35px;
+}
+
+.items {
+  padding: 25px 20px 30px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sale {
+  color: $red;
+  text-decoration: line-through;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+.second {
+  @include column;
+  margin: 0 27px;
+}
+
+.third {
+  @include column;
+  margin-left: 27px;
+}
+
+.delete {
+  color: $grey;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: 10px;
+}
+
+.item_title {
+  color: $black;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input_container {
+  width: 100px;
+  border: 1px solid #C7CCD5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 16px;
+  display: flex;
+  input {
+    width: 50px;
+    text-align: center;
+  }
+  height: fit-content;
+}
+
+.delete_selected {
+  color: $red;
+  margin-left: 9px;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.info_one {
+  padding: 25px 25px 20px;
+}
+
+.info_two {
+  padding: 20px 25px;
+}
+
+.info_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  color: $black;
+}
+
+@mixin row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_first {
+  @include row;
+}
+
+.info_second {
+  @include row;
+  margin-top: 26px;
+}
+
+.info_third {
+  @include row;
+  margin-top: 12px;
+}
+
+.info_fourth {
+  @include row;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  color: $black
+}
+
+.btn {
+  padding-top: 20.5px;
+  padding-bottom: 20.5px;
+  border-radius: 5px;
+}
+
+.tip {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 140%;
+  color: $grey;
+  display: block;
+}
+
+.info_tip {
+  font-size: 14px;
+  line-height: 140%;
+  color: $black;
+}
+
+.info_value {
+  font-size: 16px;
+  line-height: 140%;
+  color: $black;
+}
+
+.info_wrapper {
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+}
+
+@media (max-width: $tablet) {
+  .blocks {
+    display: block;
+  }
+
+  .info {
+    margin-top: 35px;
+  }
+
+  .tip {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    margin-top: 10px;
+  }
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .info_wrapper {
+    flex-direction: column;
+  }
+
+  .third {
+    flex-direction: row;
+    margin-left: 14px;
+    margin-top: 9px;
+  }
+
+  .input_container {
+    margin-left: 14px;
+
+    margin-top: 14px;
+  }
+
+  .second {
+    margin-left: 14px;
+  }
+
+  .sale {
+    margin-left: 9px;
+  }
+}

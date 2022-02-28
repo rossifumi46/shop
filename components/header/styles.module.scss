@@ -1,12 +1,22 @@
 .header {
   max-width: 1171px;
   width: 100%;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  @include padding-m;
 }
 
 .main {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.wrapper {
+  position: relative;
+  form {
+    display: flex;
+  }
 }
 
 .btn {
@@ -18,6 +28,30 @@
   padding: 11px 23px;
   color: #FFF;
   height: 43px;
+  font-size: 14px;
+  line-height: 140%;
+  display: flex;
+
+  @media (max-width: $tablet) {
+    width: auto;
+    padding: 8px 11px;
+    height: 33px;
+  }
+  svg {
+    margin-right: 17px;
+    @media (max-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+  span {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.btn_open {
+  border-radius: 0 5px 0 0;
 }
 
 .input {
@@ -29,4 +63,98 @@
   width: 540px;
   outline: none;
   padding: 17px;
+  font-size: 14px;
+  line-height: 140%;
+  @media (max-width: $tablet) {
+    height: 33px;
+    padding: 8px 17px;
+  }
+}
+
+.input_open {
+  border-radius: 5px 0 0 0;
+}
+
+.suggest {
+  border: 1px solid #468BE3;
+  padding: 23px 17px 26px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-top: none;
+  background-color: $white;
+  min-height: 50px;
+}
+
+.burger {
+  display: none;
+}
+
+.search_icon {
+  display: none;
+}
+
+.item {
+  display: flex;
+  font-size: 14px;
+  line-height: 140%;
+  color: $grey;
+  span {
+    margin-left: 17px;
+  }
+  margin-bottom: 15px;
+}
+
+.catalog_btn {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .logo {
+    width: 118px;
+  }
+
+  .wrapper {
+    form {
+      width: 275px;
+    }
+  }
+
+  .catalog_btn {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .catalog_btn {
+    display: none;
+  }
+
+  .burger {
+    display: inline;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    display: none;
+  }
+
+  .search_icon {
+    margin-left: 20px;
+    display: block;
+  }
+
+  .icon svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .logo {
+    width: 100px;
+  }
 }

@@ -1,0 +1,36 @@
+@mixin block-m {
+  background: $white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+
+@mixin btn {
+  background-color:#468BE3;
+  border-radius: 3px;
+  padding: 7px 10px;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin padding-mobile-m {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin padding-mobile-t {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@mixin padding-m {
+  @media (max-width: $tablet) {
+    @include padding-mobile-t;
+  }
+
+  @media (max-width: 480px) {
+    @include padding-mobile-m;
+  }
+}
