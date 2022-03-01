@@ -92,6 +92,13 @@
   display: none;
 }
 
+@media (max-width: $tablet) {
+  .container {
+    top: 63px;
+  }
+}
+
+
 @media (max-width: 480px) {
   .menu {
     max-height: none;

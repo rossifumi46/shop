@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { Catalog, CatalogBtn } from "../catalog";
@@ -24,7 +25,7 @@ export function Header() {
       <div className="flex justify-between items-center">
         <span className={styles.burger} onClick={handle} role="presentation"><BurgerMenuIcon /></span>
         <img className={styles.logo} src="/logo.png" alt="logo" />
-        <div className={styles.catalog_btn}>
+        <div className={styles.catalog_btn} onClick={handle}>
           <CatalogBtn />
         </div>
         <Search />

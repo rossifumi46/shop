@@ -57,10 +57,12 @@ export default function Products() {
     <div className={styles.container}>
       <div className={styles.filter_btn} onClick={() => setOpen(true)}><span>Фильтры</span><div className="hr mt-2" /></div>
       <Filter open={open} onClose={() => setOpen(false)} />
-      <div className={styles.grid}>
-        {products.map((product, index) => <ProductCard key={product.index} product={product} />)}
+      <div className="flex flex-col">
+        <div className={styles.grid}>
+          {products.map((product, index) => <ProductCard key={product.index} product={product} />)}
+        </div>
+        <MoreBtn />
       </div>
-      <MoreBtn />
     </div>
   )
 }
