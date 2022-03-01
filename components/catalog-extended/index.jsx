@@ -6,13 +6,149 @@ import Image from 'next/image';
 
 const list = [
   {
-    name: 'Электроника'
+    name: 'Электроника',
+    list: [
+      {
+        block: 'Телефоны и Смарт-часы',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Ноутбуки, планшеты и электронные книги',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Аудиотехника',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Компьютеры и комплектующие',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Умный дом и безопасность',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+    ]
   },
   {
-    name: 'Обувь'
+    name: 'Обувь',
+    list: [
+      {
+        block: 'Женщинам',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Мужчинам',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Уход и аксессуары',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Детям',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      }
+    ]
   },
   {
-    name: 'Одежда'
+    name: 'Одежда',
+    list: [
+      {
+        block: 'Женщинам',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Уход за одеждой',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Детям',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      },
+      {
+        block: 'Спецодежда',
+        cats: [
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+          'Смартфоны',
+        ]
+      }
+    ]
   }
 ]
 
@@ -65,51 +201,12 @@ export default function CatalogExtended() {
               </ul>
             </nav>
             <div className={`${styles.menu} ${!open ? styles.hidden : ''}`} style={{ top: window.matchMedia("(max-width: 480px)").matches ? `-${(list.length - (active+1))*50}px` : '0' }}>
-              <div className={styles.block}>
-                <h3 className={styles.title}>Телефоны и Смарт-часы</h3>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-              </div>
-              <div className={styles.block}>
-                <h3 className={styles.title}>Телефоны и Смарт-часы</h3>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-              </div>
-              <div className={styles.block}>
-                <h3 className={styles.title}>Телефоны и Смарт-часы</h3>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-              </div>
-              <div className={styles.block}>
-                <h3 className={styles.title}>Телефоны и Смарт-часы</h3>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-              </div>
-              <div className={styles.block}>
-                <h3 className={styles.title}>Телефоны и Смарт-часы</h3>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-                <span className={styles.subtitle}>Смартфоны</span>
-              </div>
+              {list[active].list.map(block => (
+                <div className={styles.block}>
+                  <h3 className={styles.title}>{block.block}</h3>
+                  {block.cats.map(cat => <span className={styles.subtitle}>{cat}</span>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
