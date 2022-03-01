@@ -10,8 +10,13 @@
   width: 94px;
   height: 84px;
   border: 1px solid #C7CCD4;
-
   border-radius: 5px;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 }
 
 .main {
@@ -133,10 +138,6 @@
   margin-top: 80px;
 }
 
-.left {
-
-}
-
 .right {
   margin-left: 100px;
 }
@@ -185,8 +186,8 @@
   }
 
   .block {
-    @include padding-mobile-t;
     flex-direction: column;
+    width: 100%;
   }
 
   .arrow {
@@ -223,5 +224,22 @@
 
   .right {
     margin-left: auto;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.hr {
+  @include hr-m;
+  margin: 45px 0 35px;
+  @media (max-width: $tablet) {
+    margin: 25px 0 35px;
+  }
+
+  @media (max-width) {
+    margin: 25px 0 25px
   }
 }

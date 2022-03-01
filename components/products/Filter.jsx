@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 import filter from './filter.module.scss';
 import { Checkbox } from '../checkbox';
 import { classLister } from '../../utils';
-import Slider, { Range } from 'rc-slider';
+import { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { useState } from 'react';
 import cats from './categories.module.scss';
@@ -58,6 +58,8 @@ const list = [
 ]
 
 export const Categories = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <div className="mt-3">
       {list.map(item => (
@@ -65,11 +67,13 @@ export const Categories = () => {
         ? <div>
             <div className={cats.cat}>
               {item.name}              
-              <span className="ml-[22px]"><ExtendIcon /></span>
+              <span className="ml-[22px]" onClick={() => setOpen(state => !state)}>{open ? <ExtendIcon /> : <span className={filter.extend}><ExtendIcon /></span> }</span>
             </div>
-            <div className="mt-[2px]">
-              <button className={cats.btn}>{item.child.name}</button>
-            </div>
+            {open && (
+              <div className="mt-[2px]">
+                <button className={cats.btn}>{item.child.name}</button>
+              </div>
+            )}
         </div>
         : <div className={cats.cat}>{item.name}</div>
       ))}

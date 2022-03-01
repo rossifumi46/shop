@@ -5,6 +5,7 @@ import styles from './styles.module.scss';
 import { RightArrow } from '../../icons/RightArrow';
 import { LeftArrow } from '../../icons/LeftArrow';
 import { Title } from "../title";
+import { useState } from "react";
 
 const products = [
   {
@@ -88,17 +89,24 @@ const settings = {
   ]
 };
 
-export const Progress = () => <div className={styles.progress_container}>
-  <div className={styles.progress} style={{ width: `${25}%` }}  />
+export const Progress = ({ progress }) => <div className={styles.progress_container}>
+  <div className={styles.progress} style={{ width: `${progress}%` }}  />
 </div>
 
 function CustomSlider({ title }) {
+  const [slide, setSlide] = useState(0);
+
+  function handleChange(index) {
+    setSlide(index);
+  }
+
   return (
     <div className={styles.slider_wrapper}>
       <Title title={title} />
       <div className={styles.slider}>
       <Slider
         {...settings}
+        afterChange={handleChange}
       >
         {products.map((product, index) => (
           <div className={styles.ml}>
@@ -107,7 +115,7 @@ function CustomSlider({ title }) {
         ))}
       </Slider>
       </div>
-      <Progress />
+      <Progress progress={(slide+1)/products.length*100} />
     </div>
   )
 }

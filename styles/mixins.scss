@@ -34,3 +34,9 @@
     @include padding-mobile-m;
   }
 }
+
+@mixin hr-m {
+  height: 1px;
+  background-color: #C7CCD4;
+  width: 100%;
+}

@@ -1,16 +1,22 @@
 import Image from 'next/image'
 import styles from './styles.module.scss'
-import VerticalSlider from './slider'
+import VerticalSlider, { images } from './slider'
 import Info from './info'
-import image from '../../images/product.png'
+import { useState } from 'react';
 
 export default function Base() {
+  const [image, setImage] = useState(images[0]); 
+
+  const handleClick= (image) => {
+    setImage(image);
+  }
+
   return (
     <div className={styles.base}>
       <div className={styles.gallery}>
-        <VerticalSlider />
+        <VerticalSlider onClick={handleClick} />
         <div className={styles.image}>
-          <Image layout="responsive" src={image} alt=""/>
+          <Image objectFit="contain" src={image} alt=""/>
         </div>
       </div>
       <Info />

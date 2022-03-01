@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import extended from '../../icons/extended.svg';
 import extend from '../../icons/extend.svg';
 import Image from 'next/image';
@@ -28,9 +28,27 @@ export default function CatalogExtended() {
 
   const isOpen = () => window.matchMedia("(max-width: 480px)").matches && open;
 
+  const [top, setTop] = useState(140);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.addEventListener('scroll', handleScroll)
+    }
+  }, []);
+
+  function handleScroll() {
+    if (window.scrollY > 140) {
+      setTop(0);
+    } else {
+      setTop(140);
+    }
+  }
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.dialog} />
+      <div className={styles.dialog} style={{ top }} />
       <div className={styles.container}>
         <div className={styles.catalog}>
           <div className={styles.flex}>
