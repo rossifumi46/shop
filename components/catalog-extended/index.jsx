@@ -212,7 +212,5 @@ export default function CatalogExtended() {
         </div>
       </div>
     </div>
-
-    
   )
 }
